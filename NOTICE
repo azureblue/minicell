@@ -1,0 +1,13 @@
+minicell
+Copyright 2026 azureblue
+
+This product includes data and code derived from tcell v3.6.0
+(https://github.com/gdamore/tcell), Copyright 2026 The TCell Authors,
+licensed under the Apache License, Version 2.0 (the same text as LICENSE).
+
+Escape sequences, key tables and constants were converted from Go to C by
+tools/generate.py. The key input parser in src/input.c and parts of
+src/screen.c are modified C ports of tcell's input.go and tscreen.go; each
+such file states its changes in its header.
+
+minicell is an independent project, not endorsed by the tcell authors.
