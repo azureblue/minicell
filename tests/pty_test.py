@@ -18,9 +18,9 @@ def set_size(fd, rows, cols):
 
 
 class Demo:
-    def __init__(self, term, args=()):
+    def __init__(self, term, args=(), program="demo", rows=14, cols=68):
         self.master, self.slave = pty.openpty()
-        set_size(self.slave, 14, 68)
+        set_size(self.slave, rows, cols)
         self.modes = termios.tcgetattr(self.slave)
         self.data = bytearray()
         self.pid = os.fork()
@@ -33,7 +33,7 @@ class Demo:
             os.environ["TERM"] = term
             os.environ.pop("COLORTERM", None)
             os.environ.pop("NO_COLOR", None)
-            os.execv("./build/demo", ["demo", *args])
+            os.execv("./build/" + program, [program, *args])
 
     def screen(self):
         """Renders the output: cursor positioning and printable characters."""
@@ -117,9 +117,31 @@ def terminated(term):
         demo.close()
 
 
+def tetris():
+    game = Demo("xterm-256color", program="tetris", rows=24, cols=80)
+    try:
+        game.until("TETRIS", on_screen=True)
+        game.until("LEVEL <  0 >", on_screen=True)
+        game.send(b"\x1b[C", b"\x1b[C")
+        game.until("LEVEL <  2 >", on_screen=True)
+        game.send(b"\r")
+        game.until("NEXT", on_screen=True)
+        game.until("STATISTICS", on_screen=True)
+        time.sleep(0.4)  # the first piece spawns after its entry delay
+        game.send(b"\x1b[D", b"x", b"\x1b[B")
+        game.send(b"p")
+        game.until("PAUSE", on_screen=True)
+        game.send(b"q")
+        game.finish()
+    finally:
+        game.close()
+
+
 session("xterm-256color", "xterm-256color, 256 colors")
 session("any-terminal", "any-terminal, 256 colors")
 session("linux", "linux, 8 colors")
 session("unknown", "xterm, 8 colors", ["--term", "xterm"])
 terminated("xterm-256color")
-print("PTY: xterm-256color, any-terminal, linux, --term; split keys, resize, exit, SIGTERM passed")
+tetris()
+print("PTY: xterm-256color, any-terminal, linux, --term; split keys, resize, exit, SIGTERM;"
+      " tetris passed")
