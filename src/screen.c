@@ -250,13 +250,15 @@ static void destroy(mc_screen *s) {
     free(s);
 }
 
-/* Without the startup queries of tcell's engage, which minicell skips. */
+/* tcell's engage, without its startup queries and without enableAltChars:
+   tcell designates DEC line drawing as G1 for terminals without UTF-8, but
+   minicell draws lines as UTF-8 and never uses G1, and in at least one
+   VTE-based terminal the designation turned lowercase text into graphics. */
 static void engage(mc_screen *s, outbuf *o) {
     out_puts(o, VT_ENTER_CA);
     if (!s->legacy)
         out_puts(o, VT_SAVE_TITLE);
     out_puts(o, VT_ENTER_KEYPAD);
-    out_puts(o, VT_ENABLE_ALT_CHARS);
     out_puts(o, VT_SHOW_CURSOR_OFF);
     out_puts(o, VT_AUTO_MARGIN_OFF);
     out_puts(o, VT_CLEAR);

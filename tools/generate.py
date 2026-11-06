@@ -136,7 +136,7 @@ def generate_constants():
 # tscreen.go constants that minicell writes.
 SEQUENCES = ["sgr0", "bold", "dim", "italic", "underline", "blink", "reverse", "strikeThrough",
              "clear", "setCursorPosition", "setFg8", "setFg256", "setBg8", "setBg256",
-             "enterCA", "exitCA", "enterKeypad", "exitKeypad", "enableAltChars"]
+             "enterCA", "exitCA", "enterKeypad", "exitKeypad"]
 
 # Strings that tscreen.go only assigns for terminals that are not "legacy".
 NON_LEGACY = ["saveTitle", "restoreTitle"]

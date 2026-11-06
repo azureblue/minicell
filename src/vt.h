@@ -22,7 +22,6 @@
 #define VT_EXIT_CA                "\033[?1049l"          /* exitCA */
 #define VT_ENTER_KEYPAD           "\033[?1h\033="        /* enterKeypad */
 #define VT_EXIT_KEYPAD            "\033[?1l\033>"        /* exitKeypad */
-#define VT_ENABLE_ALT_CHARS       "\033(B\033)0"         /* enableAltChars */
 
 /* Not sent to legacy terminals (linux, vt*, *ansi*, sun). */
 #define VT_SAVE_TITLE             "\033[22;2t"           /* saveTitle */

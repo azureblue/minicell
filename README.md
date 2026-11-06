@@ -23,8 +23,9 @@ this repository: `make regenerate` downloads the files pinned in
 ## Build
 
 ```sh
-make             # build/libminicell.a and build/demo
+make             # build/libminicell.a, build/demo and build/tetris
 ./build/demo     # q, Escape or Ctrl-C to quit
+./build/tetris   # Tetris with NES rules; needs a 58x22 terminal
 make test        # unit tests, C++ header test, PTY test (needs python3)
 ```
 
@@ -120,6 +121,8 @@ SIGINT/SIGTERM.
 | `src/utf8.c` | UTF-8 encoding and decoding |
 | `src/vt.h` | Escape sequences written to the terminal *(generated)* |
 | `src/keytables.h` | Key sequences read from the terminal *(generated)* |
+| `examples/demo.c` | Minimal example: frame, text, palette, key events |
+| `examples/tetris.c` | Tetris with the NES (1989) rules; the header lists what is emulated |
 | `tools/generate.py` | Generator; `make regenerate` (Python 3, network on first run) |
 | `SOURCES.sha256` | Checksums of the tcell files the generator uses; see `SOURCES.md` |
 

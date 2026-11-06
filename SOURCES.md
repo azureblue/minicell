@@ -25,7 +25,9 @@ https://github.com/gdamore/tcell/tree/v3.6.0
 
 tcell's license is the Apache License 2.0, the same text as `LICENSE`.
 
-minicell ports the legacy keyboard mode only. tcell's terminal queries,
+minicell ports the legacy keyboard mode only, and does not send tcell's
+`enableAltChars` (`ESC ( B ESC ) 0`): minicell draws lines as UTF-8 and never
+uses the G1 character set it designates. tcell's terminal queries,
 mouse, bracketed paste, focus, kitty and win32 keyboard protocols, true color
 and window titles beyond save/restore are not used. The generator targets
 this exact tcell version; upgrading requires review.

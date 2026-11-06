@@ -178,7 +178,7 @@ static void test_engage(void) {
     engage(f.s, &o);
     disengage(f.s, &o);
     CHECK(out_flush(&o, f.s->fd) == 0);
-    CHECK(strcmp(output(f), "\033[?1049h\033[22;2t\033[?1h\033=\033(B\033)0\033[?25l\033[?7l"
+    CHECK(strcmp(output(f), "\033[?1049h\033[22;2t\033[?1h\033=\033[?25l\033[?7l"
                             "\033[H\033[J"
                             "\033[?25h\033[?1l\033>\033[m\033[?7h\033[23;2t\033[H\033[J\033[?1049l") ==
           0);
