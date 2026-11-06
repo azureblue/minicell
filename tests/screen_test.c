@@ -1,5 +1,3 @@
-/* SPDX-FileCopyrightText: 2026 azureblue
- * SPDX-License-Identifier: Apache-2.0 */
 /* White-box screen tests: output goes to a pipe instead of a terminal. */
 #include "../src/screen.c"
 

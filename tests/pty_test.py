@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-# SPDX-FileCopyrightText: 2026 azureblue
-# SPDX-License-Identifier: Apache-2.0
 """PTY integration test of build/demo: startup, keys split across reads,
 resize, cleanup on exit and on SIGTERM, terminal mode restoration."""
 

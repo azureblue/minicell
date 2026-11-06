@@ -1,5 +1,3 @@
-/* SPDX-FileCopyrightText: 2026 azureblue
- * SPDX-License-Identifier: Apache-2.0 */
 #include "utf8.h"
 
 int mc_utf8_decode(const char *s, size_t n, uint32_t *cp, size_t *len) {

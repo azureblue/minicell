@@ -127,5 +127,5 @@ SIGINT/SIGTERM.
 
 Copyright 2026 azureblue. Licensed under the Apache License, Version 2.0; see
 `LICENSE`. minicell contains code and data derived from tcell, Copyright 2026
-The TCell Authors, also under Apache-2.0; see `NOTICE`. Every file names its
-copyright holders and license in an SPDX header.
+The TCell Authors, also under Apache-2.0; see `NOTICE`. Files derived from tcell
+state its copyright and the changes in their header.

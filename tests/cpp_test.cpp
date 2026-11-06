@@ -1,5 +1,3 @@
-// SPDX-FileCopyrightText: 2026 azureblue
-// SPDX-License-Identifier: Apache-2.0
 // The public header must compile as C++11 and link against the C library.
 #include "minicell.h"
 

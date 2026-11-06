@@ -1,8 +1,8 @@
-/* SPDX-FileCopyrightText: 2026 The TCell Authors
- * SPDX-FileCopyrightText: 2026 azureblue
- * SPDX-License-Identifier: Apache-2.0
+/* Keyboard input parser.
+ * Copyright 2026 The TCell Authors; modified C port by azureblue.
+ * Apache License 2.0.
  *
- * Modified C port of tcell v3.6.0 input.go: scan, handleCsi, calcModifier,
+ * Port of tcell v3.6.0 input.go: scan, handleCsi, calcModifier,
  * postControlKey and the legacy rules of newEventKey. */
 #include "input.h"
 

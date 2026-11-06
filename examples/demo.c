@@ -1,5 +1,3 @@
-/* SPDX-FileCopyrightText: 2026 azureblue
- * SPDX-License-Identifier: Apache-2.0 */
 /* minicell demo: draws a frame, some text and symbols and the palette, and shows
    the last key pressed. Exit with q, Escape or Ctrl-C. */
 #define _POSIX_C_SOURCE 200809L

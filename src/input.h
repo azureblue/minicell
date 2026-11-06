@@ -1,11 +1,10 @@
-/* SPDX-FileCopyrightText: 2026 The TCell Authors
- * SPDX-FileCopyrightText: 2026 azureblue
- * SPDX-License-Identifier: Apache-2.0
+/* Keyboard input parser.
+ * Copyright 2026 The TCell Authors; modified C port by azureblue.
+ * Apache License 2.0.
  *
- * Keyboard input parser. Modified C port of the legacy key handling in
- * tcell v3.6.0 input.go; mouse, paste, focus, query replies and the kitty
- * and win32 keyboard protocols were left out. Every terminal is assumed
- * to send xterm (ECMA-48) sequences. */
+ * Port of the legacy key handling in tcell v3.6.0 input.go; mouse, paste,
+ * focus, query replies and the kitty and win32 keyboard protocols were left
+ * out. Every terminal is assumed to send xterm (ECMA-48) sequences. */
 #ifndef MC_INPUT_H
 #define MC_INPUT_H
 

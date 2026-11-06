@@ -1,5 +1,3 @@
-/* SPDX-FileCopyrightText: 2026 azureblue
- * SPDX-License-Identifier: Apache-2.0 */
 /* Minimal test assertions that stay active regardless of NDEBUG. */
 #ifndef MC_CHECK_H
 #define MC_CHECK_H

@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: 2026 azureblue
-# SPDX-License-Identifier: Apache-2.0
 CC ?= cc
 CXX ?= c++
 AR ?= ar

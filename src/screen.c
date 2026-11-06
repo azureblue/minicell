@@ -1,11 +1,10 @@
-/* SPDX-FileCopyrightText: 2026 The TCell Authors
- * SPDX-FileCopyrightText: 2026 azureblue
- * SPDX-License-Identifier: Apache-2.0
+/* Terminal setup, cell buffers, rendering and the event loop.
+ * Copyright 2026 azureblue; parts derived from tcell, Copyright 2026
+ * The TCell Authors. Apache License 2.0.
  *
- * Terminal setup, cell buffers, rendering and the event loop. The palette
- * rules, engage, draw and disengage follow tcell v3.6.0 tscreen.go, ported
- * to C and modified; terminal queries, mouse, paste and true color were
- * left out. */
+ * The palette rules, engage, draw and disengage are modified C ports of
+ * tcell v3.6.0 tscreen.go; terminal queries, mouse, paste and true color
+ * were left out. */
 #define _POSIX_C_SOURCE 200809L
 #include "minicell.h"
 

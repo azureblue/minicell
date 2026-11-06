@@ -1,5 +1,3 @@
-/* SPDX-FileCopyrightText: 2026 azureblue
- * SPDX-License-Identifier: Apache-2.0 */
 /* Strict UTF-8 coding. */
 #ifndef MC_UTF8_H
 #define MC_UTF8_H

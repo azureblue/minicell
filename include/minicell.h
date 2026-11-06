@@ -1,5 +1,3 @@
-/* SPDX-FileCopyrightText: 2026 azureblue
- * SPDX-License-Identifier: Apache-2.0 */
 /* minicell: a small terminal cell library for C and C++, modeled on tcell.
  *
  * All functions are single-threaded. The library opens /dev/tty itself,
